@@ -1,0 +1,2 @@
+Doubts and things to try by yourself
+Read from file or long string in go
