@@ -1,2 +1,3 @@
 Doubts and things to try by yourself
-Read from file or long string in go
+-Read from file or long string in go
+-2D Array declarations
