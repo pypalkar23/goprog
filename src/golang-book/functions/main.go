@@ -20,8 +20,9 @@ func main() {
 	fmt.Println(makeEven())         //0
 	fmt.Println(makeEven())         //2
 	fmt.Println(makeEven())         //4
-
 	fmt.Println(factorial(uint(5)))
+
+	deferDemonstration()
 }
 
 //	 name	param type	   out type
@@ -45,6 +46,7 @@ func f3() (int, int) {
 }
 
 //multiple named returns
+//can collapse the params with same type for e.g (d1,d2 int)
 func f4() (d1 int, d2 int) {
 	d1 = 10
 	d2 = 15
@@ -77,3 +79,18 @@ func factorial(x uint) uint {
 	}
 	return x * factorial(x-1)
 }
+
+func first() {
+	fmt.Println("1st")
+}
+
+func second() {
+	fmt.Println("2nd")
+}
+
+func deferDemonstration() {
+	defer second()
+	first()
+}
+
+func pa
