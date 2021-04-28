@@ -1,5 +1,10 @@
 Doubts and things to try by yourself
 -Read from file or long string in go
 -2D Array declarations
+-System Args
+
+
+Notes:
 -When Passing array to a function make slice of it as you are constrained to pass length 
  as well while declaring the parameter in the function definition
+-Everything is pass by value in Go unless passed using pointer reference
