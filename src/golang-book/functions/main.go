@@ -92,5 +92,3 @@ func deferDemonstration() {
 	defer second()
 	first()
 }
-
-func pa
