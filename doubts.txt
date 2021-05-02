@@ -1,10 +1,13 @@
 Doubts and things to try by yourself
--Read from file or long string in go
--2D Array declarations
--System Args
+-   Read from file or long string in go
+-   2D Array declarations
+-   System Args
+-   Purpose of uni-directional channels
 
 
 Notes:
--When Passing array to a function make slice of it as you are constrained to pass length 
- as well while declaring the parameter in the function definition
--Everything is pass by value in Go unless passed using pointer reference
+-   When Passing array to a function make slice of it as you are constrained to pass length 
+    as well while declaring the parameter in the function definition
+-   Everything is pass by value in Go unless passed using pointer reference
+-   A bi-directional channel can be passed to a function that takes send-only or receive-only channels, 
+    but the reverse is not true.
