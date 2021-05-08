@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var x string = "Hello World" // declaration & assignment in one stmt
@@ -32,6 +34,34 @@ func main() {
 	) //multiple variable declaration
 
 	fmt.Println(a, b, c)
+
+	const (
+		tmp = 1
+		tmp2
+		tmp3 = 2
+		tmp4
+	)
+	fmt.Println(tmp, tmp2, tmp3, tmp4) //1 1 2 2
+	//value similar to the previous variable gets assigned to the current variable if value is not specified explicitly.
+
+	type Weekday int
+	const (
+		Monday Weekday = iota //iota generator every next constant declared gets value which is one greater than previous starting from 0
+		Tuesday
+		Wednesday
+		Thursday
+		Friday
+		Saturday
+		Sunday
+	)
+
+	fmt.Println(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)
+
+	const (
+		_   = 1 << (10 * iota) // 1 << 0 = 1
+		KiB                    // 1 << (10*1)= 1024
+		MiB                    // 1 << (10*2)= 1048576
+	)
 
 	fmt.Print("Enter a number: ")
 	var input float64
