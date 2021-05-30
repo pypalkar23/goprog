@@ -12,6 +12,10 @@ type Movie struct {
 	Actors []string
 }
 
+var titles []struct {
+	Title string
+}
+
 func main() {
 	movies := []Movie{
 		{Title: "Casablanca", Year: 1942, Color: false,
@@ -28,10 +32,6 @@ func main() {
 		fmt.Printf("Json marshalling failed: %s", err)
 	}
 	fmt.Printf("%s\n", data)
-
-	var titles []struct {
-		Title string
-	}
 
 	var moviesList []Movie
 
