@@ -2,6 +2,14 @@ package main
 
 import "fmt"
 
+type Car struct {
+	model string
+}
+
+func (c *Car) PrintModel() {
+	fmt.Println(c.model)
+}
+
 func main() {
 	i := 72
 	iPtr := &i //&returns the pointer
@@ -16,12 +24,17 @@ func main() {
 	y := 14.08
 	squareByPointer(&y)
 	fmt.Println(y)
+
+	c := Car{model: "Toyota Corolla LE"}
+	cPtr := &c
+	cPtr.PrintModel()
 }
 
 func changeByReference(ptr *int) {
 	//only ptr=1 means changing the address which isnt allowed in go
 	//*ptr means access the value referenced by pointer
 	*ptr = 1
+
 }
 
 func squareByPointer(x *float64) {

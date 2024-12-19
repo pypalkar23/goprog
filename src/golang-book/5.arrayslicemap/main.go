@@ -68,6 +68,25 @@ func main() {
 	for i := 0; i < len(slice4); i++ {
 		fmt.Println(slice4[i])
 	}
+	//array and slice have same capacity and slice
+	fmt.Printf("Cap of the array: %d\n", cap(arr))
+	fmt.Printf("Cap of the slice: %d\n", cap(slice4))
+	fmt.Printf("Length of the array: %d\n", len(arr))
+
+	//appending new elements to a slice which is already full.
+	slice4 = append(slice4, 10)
+	slice4 = append(slice4, 15)
+
+	for i := 0; i < len(slice4); i++ {
+		fmt.Println(slice4[i])
+	}
+
+	/*slice gets bigger than the array underneath, new slice gets created (doubled in capacity) with new array underneath,
+	and existing elements get copied to it.*/
+
+	fmt.Printf("Cap of the slice: %d\n", cap(slice4))
+	fmt.Printf("Cap of the array: %d\n", cap(slice4))
+	fmt.Printf("Length of the array: %d\n", len(arr))
 
 	//append slice
 	slice5 := []int{1, 2, 3}

@@ -7,6 +7,7 @@ import (
 func main() {
 	var x string = "Hello World" // declaration & assignment in one stmt
 	fmt.Println(x)
+	fmt.Println(x[0]) // Byte representation of H
 
 	var y string // declaration
 	y = "first"  // assignment
@@ -63,6 +64,7 @@ func main() {
 		MiB                    // 1 << (10*2)= 1048576
 	)
 
+	fmt.Println(KiB, MiB)
 	fmt.Print("Enter a number: ")
 	var input float64
 	fmt.Scanf("%f", &input)
