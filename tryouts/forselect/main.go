@@ -16,6 +16,7 @@ func sender1(datachan chan<- string, ctx context.Context, wg *sync.WaitGroup) {
 	defer fmt.Println("Returning from sender 1")
 	ticker := time.NewTicker(2 * time.Second)
 	defer ticker.Stop()
+
 	for {
 		select {
 		case <-ctx.Done():
@@ -30,8 +31,8 @@ func sender2(datachan chan<- string, ctx context.Context, wg *sync.WaitGroup) {
 	defer wg.Done()
 	defer fmt.Println("Returning from sender 2")
 	ticker := time.NewTicker(3 * time.Second)
-
 	defer ticker.Stop()
+
 	for {
 		select {
 		case <-ctx.Done():
