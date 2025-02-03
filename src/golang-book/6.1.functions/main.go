@@ -25,7 +25,7 @@ func main() {
 	deferDemonstration()
 }
 
-//	 name	param type	   out type
+// name	param type	   out type
 func average(xs []float64) float64 {
 	total := 0.0
 	for _, value := range xs {
@@ -40,20 +40,20 @@ func f2() (r int) {
 	return
 }
 
-//multiple returns
+// multiple returns
 func f3() (int, int) {
 	return 5, 6
 }
 
-//multiple named returns
-//can collapse the params with same type for e.g (d1,d2 int)
-func f4() (d1 int, d2 int) {
+// multiple named returns
+// can collapse the params with same type for e.g (d1,d2 int)
+func f4() (d1, d2 int) {
 	d1 = 10
 	d2 = 15
 	return
 }
 
-//variadic functions
+// variadic functions
 func add(args ...float64) float64 {
 	total := 0.0
 	for _, val := range args {
@@ -62,7 +62,7 @@ func add(args ...float64) float64 {
 	return total
 }
 
-//closure
+// closure
 func makeEvenGenerator() func() uint {
 	i := uint(0)
 	return func() (ret uint) {

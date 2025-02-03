@@ -58,13 +58,14 @@ type Circle struct {
 	x, y, r float64
 }
 
-//normal function that takes circle instance
+// normal function that takes circle instance
 func func_calcArea(c Circle) float64 {
 	return math.Pi * c.r * c.r
 }
 
-//method declaration
-//    receiver
+// method declaration
+//
+//	receiver
 func (c *Circle) method_area() float64 {
 	return math.Pi * c.r * c.r //notice no *c reference here
 }

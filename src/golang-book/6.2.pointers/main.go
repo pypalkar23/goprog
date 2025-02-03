@@ -28,6 +28,10 @@ func main() {
 	c := Car{model: "Toyota Corolla LE"}
 	cPtr := &c
 	cPtr.PrintModel()
+
+	intPtr := new(int)
+	*intPtr = 10
+	fmt.Println(intPtr)
 }
 
 func changeByReference(ptr *int) {

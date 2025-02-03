@@ -15,7 +15,7 @@ func main() {
 	fmt.Println(multiArea(&c, &r))
 }
 
-//declaration of interface
+// declaration of interface
 type Shape interface {
 	area() float64
 }
@@ -28,7 +28,7 @@ type Rectangle struct {
 	x, y, l, b float64
 }
 
-//to implement an interface for particular struct implement its methods
+// to implement an interface for particular struct implement its methods
 func (c *Circle) area() float64 {
 	return math.Pi * c.r * c.r
 }

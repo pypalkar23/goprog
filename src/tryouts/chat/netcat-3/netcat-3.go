@@ -19,7 +19,7 @@ func main() {
 	input := bufio.NewScanner(os.Stdin)
 	for input.Scan() {
 		fmt.Fprintln(conn, input.Text())
-	}
+	}j
 }
 
 func mustCopy(dst io.Writer, src io.Reader) {
